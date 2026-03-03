@@ -1,1 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jectix Telecom · Fibra Óptica</title>
+  <!-- Bootstrap 5 CSS (ícones incluídos) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (biblioteca oficial de ícones) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts (opcional, para fonte mais moderna) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    body {
+      background-color: #f8fafc;
+    }
+    /* paleta personalizada: tons de azul tecnológico e laranja de call-to-action */
+    :root {
+      --primary: #0b2b4f;       /* azul profundo */
+      --secondary: #f05b24;     /* laranja Jectix (destaque) */
+      --accent-bg: #eef2f6;
+    }
+    .navbar, .footer {
+      background-color: var(--primary) !important;
+    }
+    .navbar-brand, .nav-link, .footer, .footer a {
+      color: white !important;
+    }
+    .nav-link:hover {
+      color: var(--secondary) !important;
+    }
+    .btn-jectix {
+      background-color: var(--secondary);
+      color: white;
+      border-radius: 40px;
+      padding: 0.6rem 2rem;
+      font-weight: 600;
+      border: none;
+      transition: 0.3s;
+    }
+    .btn-jectix:hover {
+      background-color: #d94412;
+      color: white;
+      transform: scale(1.02);
+    }
+    .bg-soft {
+      background-color: var(--accent-bg);
+    }
+    .icon-circle {
+      background-color: white;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem auto;
+      box-shadow: 0 6px 15px rgba(0,20,50,0.08);
+      color: var(--primary);
+      font-size: 2rem;
+      border: 1px solid rgba(11,43,79,0.1);
+    }
+    .card {
+      border: none;
+      border-radius: 20px;
+      transition: 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -10px rgba(0,20,40,0.15);
+    }
+    .info-badge {
+      background: white;
+      border-radius: 50px;
+      padding: 0.4rem 1rem;
+      font-size: 0.9rem;
+      border-left: 4px solid var(--secondary);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    }
+    .section-title {
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+    .section-sub {
+      color: #2c3e50;
+      font-weight: 500;
+    }
+    .display-number {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .footer {
+      font-size: 0.95rem;
+    }
+    .footer .bi {
+      color: var(--secondary);
+      margin-right: 6px;
+    }
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f1f6fa 100%);
+      border-bottom: 1px solid rgba(11,43,79,0.05);
+    }
+    .cnpj-block {
+      background: rgba(11,43,79,0.02);
+      border-radius: 16px;
+      padding: 0.5rem 1rem;
+      font-family: monospace;
+      font-size: 1rem;
+      border: 1px dashed rgba(11,43,79,0.2);
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
 
+<!-- Navbar fixa com ícone e telefone -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      <i class="bi bi-wifi" style="color: var(--secondary);"></i> Jectix Telecom
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center gap-3">
+        <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cobertura">Cobertura</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        <li class="nav-item">
+          <a class="btn btn-jectix" href="tel:+557132131753">
+            <i class="bi bi-telephone-fill"></i> (71) 3213-1753
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO / cabeçalho com frase de impacto e dados básicos -->
+<section class="hero py-5">
+  <div class="container py-4">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <span class="info-badge mb-4 d-inline-block"><i class="bi bi-check-circle-fill text-success me-1"></i> Situação cadastral ativa desde 22/01/2016</span>
+        <h1 class="display-5 fw-bold section-title">Conectividade de verdade no <span style="color: var(--secondary);">Pernambués</span> e toda Salvador</h1>
+        <p class="lead text-secondary-emphasis my-4">Internet fibra óptica com estabilidade, suporte humano e CNPJ sólido. A Jectix Telecom leva o melhor sinal até você.</p>
+        <div class="d-flex flex-wrap gap-3 align-items-center">
+          <a href="#contato" class="btn btn-lg btn-jectix px-4"><i class="bi bi-chat-dots-fill me-2"></i>Falar com comercial</a>
+          <span class="cnpj-block bg-light"><i class="bi bi-building"></i> CNPJ 24.029.566/0001-04</span>
+        </div>
+        <!-- mini info Razão social -->
+        <p class="mt-3 text-secondary"><i class="bi bi-tag"></i> <strong>Razão Social:</strong> Jectix Telecomunicacao e Servicos LTDA</p>
+      </div>
+      <div class="col-lg-5 text-center">
+        <!-- ilustração / ícone de rede -->
+        <i class="bi bi-hdd-stack-fill" style="font-size: 10rem; color: var(--primary); opacity: 0.2;"></i>
+        <h2 class="h4 mt-3"><span class="badge bg-white text-dark px-4 py-3 shadow-sm"><i class="bi bi-geo-alt-fill text-danger me-2"></i>Rua Santa Veruza, 24 · Pernambués · Salvador/BA</span></h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Destaques rápidos com ícones (cards superiores) -->
+<section class="container my-5">
+  <div class="row g-4 text-center">
+    <div class="col-md-3 col-6">
+      <div class="icon-circle"><i class="bi bi-trophy-fill"></i></div>
+      <h5 class="fw-bold">+8 anos</h5>
+      <p class="text-secondary small">de mercado em Salvador</p>
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="icon-circle"><i class="bi bi-globe2"></i></div>
+      <h5 class="fw-bold">Fibra 100%</h5>
+      <p class="text-secondary small">rede própria e estável</p>
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="icon-circle"><i class="bi bi-headset"></i></div>
+      <h5 class="fw-bold">Suporte local</h5>
+      <p class="text-secondary small">equipe técnica no bairro</p>
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="icon-circle"><i class="bi bi-shield-check"></i></div>
+      <h5 class="fw-bold">CNPJ ativo</h5>
+      <p class="text-secondary small">desde 2016 · regular</p>
+    </div>
+  </div>
+</section>
+
+<!-- Seção PLANOS (com frases e ícones) -->
+<section id="planos" class="bg-soft py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary bg-opacity-10 text-primary mb-2 px-3 py-2">ESCOLHA O SEU</span>
+      <h2 class="section-title display-6">Planos de internet que cabem no seu bolso</h2>
+      <p class="section-sub">velocidade simétrica, Wi-Fi incluso e a melhor experiência</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <!-- Plano 200 Mega -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 p-4 shadow-sm">
+          <div class="icon-circle" style="background: #e9f0fd;"><i class="bi bi-speedometer2" style="color: #0b2b4f;"></i></div>
+          <h3 class="h4 fw-bold">200 Mega</h3>
+          <p class="text-secondary small"><i class="bi bi-lightning-charge-fill text-warning"></i> Perfeito para famílias</p>
+          <ul class="list-unstyled mt-3">
+            <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--secondary);"></i> Download/Upload 200 Mbps</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--secondary);"></i> Wi-Fi 5 incluso</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--secondary);"></i> Suporte 24h</li>
+          </ul>
+          <p class="display-6 fw-bold mt-3">R$ 99,<small>90</small></p>
+          <span class="text-secondary small"><i class="bi bi-calendar-check"></i> fidelidade zero</span>
+          <div class="mt-4"><a href="#" class="btn btn-outline-primary rounded-pill w-100">Assinar <i class="bi bi-arrow-right"></i></a></div>
+        </div>
+      </div>
+      <!-- Plano 400 Mega (destaque) -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 p-4 border-2 border-warning shadow">
+          <div class="icon-circle" style="background: #fff2e5;"><i class="bi bi-rocket-takeoff-fill" style="color: var(--secondary);"></i></div>
+          <h3 class="h4 fw-bold">400 Mega <span class="badge bg-warning text-dark ms-2">+indicado</span></h3>
+          <p class="text-secondary small"><i class="bi bi-lightning-charge-fill text-warning"></i> streaming e games</p>
+          <ul class="list-unstyled mt-3">
+            <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--secondary);"></i> Download/Upload 400 Mbps</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--secondary);"></i> Wi-Fi 6 + roteador incluso</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--secondary);"></i> Instalação grátis</li>
+          </ul>
+          <p class="display-6 fw-bold mt-3">R$ 129,<small>90</small></p>
+          <span class="text-secondary small"><i class="bi bi-calendar-check"></i> fidelidade zero</span>
+          <div class="mt-4"><a href="#" class="btn btn-jectix w-100 rounded-pill">Quero esse <i class="bi bi-star-fill ms-1"></i></a></div>
+        </div>
+      </div>
+      <!-- Plano 600 Mega -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 p-4 shadow-sm">
+          <div class="icon-circle" style="background: #e9f0fd;"><i class="bi bi-cpu" style="color: #0b2b4f;"></i></div>
+          <h3 class="h4 fw-bold">600 Mega</h3>
+          <p class="text-secondary small"><i class="bi bi-lightning-charge-fill text-warning"></i> máxima velocidade</p>
+          <ul class="list-unstyled mt-3">
+            <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--secondary);"></i> Download/Upload 600 Mbps</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--secondary);"></i> Wi-Fi 6 + suporte premium</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--secondary);"></i> 2 pontos adicionais grátis</li>
+          </ul>
+          <p class="display-6 fw-bold mt-3">R$ 179,<small>90</small></p>
+          <span class="text-secondary small"><i class="bi bi-calendar-check"></i> fidelidade zero</span>
+          <div class="mt-4"><a href="#" class="btn btn-outline-primary rounded-pill w-100">Assinar</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- frase complementar -->
+    <p class="text-center mt-5 text-secondary"><i class="bi bi-wifi"></i> Todos os planos com IPv6, DHCP e suporte técnico especializado</p>
+  </div>
+</section>
+
+<!-- Seção cobertura / onde atuamos (endereço completo e mapa fake) -->
+<section id="cobertura" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="section-title">Nossa área de cobertura</h2>
+        <p class="lead fs-6 text-secondary">Atendemos <strong>Salvador</strong> com espinha dorsal em <span class="fw-bold text-dark">Pernambués,</span> bairro onde nossa história começou.</p>
+        <div class="d-flex align-items-start gap-3 my-4">
+          <i class="bi bi-pin-map-fill fs-1" style="color: var(--secondary);"></i>
+          <div>
+            <h5>Escritório central</h5>
+            <address class="mb-2 fw-semibold">Rua Santa Veruza, 24 - Pernambués<br>Salvador - BA, 41120-000</address>
+            <span class="badge bg-light text-dark py-2"><i class="bi bi-building"></i> Jectix Telecomunicacao e Servicos LTDA</span>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-6">
+            <p><i class="bi bi-telephone-forward-fill text-primary me-2"></i>(71) 3213-1753</p>
+          </div>
+          <div class="col-6">
+            <p><i class="bi bi-envelope-paper-fill text-primary me-2"></i> contato@jectixtelecom.com.br</p>
+          </div>
+        </div>
+        <p class="text-secondary small"><i class="bi bi-check2-circle"></i> Instalação em todos os bairros de Salvador, consulte condições.</p>
+      </div>
+      <div class="col-md-6">
+        <div class="bg-light p-3 rounded-4 text-center border">
+          <i class="bi bi-map fs-1 d-block" style="font-size: 7rem; color: var(--primary); opacity: 0.2;"></i>
+          <span class="badge bg-white border px-4 py-3"><i class="bi bi-geo-alt"></i> R. Santa Veruza, 24 - Pernambués, Salvador</span>
+          <p class="mt-3 small text-secondary">( mapa de localização ilustrativo )</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção de informações fiscais/cadastrais em formato de bloco -->
+<section class="bg-soft py-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 p-4 bg-white rounded-4 shadow-sm">
+          <span><i class="bi bi-calendar2-check me-1"></i> <strong>Situação cadastral:</strong> Ativa (22/01/2016)</span>
+          <span><i class="bi bi-qr-code"></i> <strong>CNPJ:</strong> 24.029.566/0001-04</span>
+          <span><i class="bi bi-file-text"></i> <strong>Razão Social:</strong> Jectix Telecomunicacao e Servicos LTDA</span>
+          <span class="text-muted"><i class="bi bi-building"></i> <strong>Nome fantasia:</strong> Jectix Telecom</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contato / rodapé avançado com frases finais -->
+<section id="contato" class="py-5">
+  <div class="container text-center">
+    <i class="bi bi-headset fs-1" style="color: var(--secondary);"></i>
+    <h2 class="section-title mt-2">Fale com a Jectix</h2>
+    <p class="section-sub">Tire dúvidas, peça uma visita ou consulte sua fatura</p>
+    <div class="row mt-5 justify-content-center">
+      <div class="col-md-4 mb-3">
+        <div class="card p-4">
+          <i class="bi bi-whatsapp fs-1" style="color: #25D366;"></i>
+          <h5>WhatsApp</h5>
+          <p class="small">(71) 3213-1753</p>
+          <a href="https://wa.me/557132131753" class="btn btn-outline-success rounded-pill">Enviar mensagem</a>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card p-4">
+          <i class="bi bi-telephone fs-1" style="color: var(--primary);"></i>
+          <h5>Central de atendimento</h5>
+          <p class="small">(71) 3213-1753</p>
+          <a href="tel:+557132131753" class="btn btn-outline-primary rounded-pill">Ligar agora</a>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card p-4">
+          <i class="bi bi-envelope fs-1" style="color: #6c757d;"></i>
+          <h5>E-mail</h5>
+          <p class="small">comercial@jectixtelecom.com.br</p>
+          <a href="mailto:comercial@jectixtelecom.com.br" class="btn btn-outline-secondary rounded-pill">Enviar e-mail</a>
+        </div>
+      </div>
+    </div>
+    <!-- frase final -->
+    <p class="mt-5 fst-italic text-secondary">"Jectix Telecom: a fibra que conecta sua casa ao mundo, com raízes no Pernambués."</p>
+  </div>
+</section>
+
+<!-- Footer definitivo com dados completos e ícones -->
+<footer class="footer pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h5><i class="bi bi-wifi"></i> Jectix Telecom</h5>
+        <p class="small opacity-75">Internet fibra óptica em Salvador com qualidade e atendimento próximo. Mais de 8 anos de história.</p>
+        <p class="small"><i class="bi bi-telephone"></i> (71) 3213-1753 | <i class="bi bi-envelope"></i> contato@jectixtelecom.com.br</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Dados cadastrais</h5>
+        <ul class="list-unstyled small opacity-75">
+          <li><i class="bi bi-chevron-right"></i> CNPJ: 24.029.566/0001-04</li>
+          <li><i class="bi bi-chevron-right"></i> Razão Social: Jectix Telecomunicacao e Servicos LTDA</li>
+          <li><i class="bi bi-chevron-right"></i> Nome Fantasia: Jectix Telecom</li>
+          <li><i class="bi bi-chevron-right"></i> Abertura: 22/01/2016 (Ativa)</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Endereço</h5>
+        <address class="small opacity-75">
+          <i class="bi bi-pin-fill"></i> Rua Santa Veruza, 24<br>
+          Bairro: Pernambués<br>
+          Salvador - BA, 41120-000
+        </address>
+        <p><i class="bi bi-building"></i> Matriz: Salvador/BA</p>
+      </div>
+    </div>
+    <hr class="opacity-25">
+    <div class="d-flex flex-wrap justify-content-between align-items-center small">
+      <span>© 2025 Jectix Telecom — Todos os direitos reservados.</span>
+      <span class="mt-2 mt-md-0"><i class="bi bi-shield-lock"></i> site desenvolvido com informações institucionais</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS (para menu responsivo) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
